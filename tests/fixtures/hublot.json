@@ -1,0 +1,9 @@
+{
+  "addDeviceFlowVersion": 2,
+  "hubSSID": "Perfume Genie",
+  "color": "gold",
+  "deviceVersion": "Genie 2.1",
+  "hubHash": "1111111111111111111111111111111111111111111111111111111111111111",
+  "isSecure": false,
+  "firmwareId": 127
+}

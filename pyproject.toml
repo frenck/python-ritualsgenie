@@ -1,0 +1,137 @@
+[project]
+name = "ritualsgenie"
+version = "0.0.0"
+description = "Asynchronous Python client for the Rituals Perfume Genie API."
+authors = [{ name = "Franck Nijhof", email = "opensource@frenck.dev" }]
+maintainers = [{ name = "Franck Nijhof", email = "opensource@frenck.dev" }]
+license = "MIT"
+requires-python = ">=3.12"
+readme = "README.md"
+keywords = [
+  "api",
+  "async",
+  "client",
+  "diffuser",
+  "fragrance",
+  "home-assistant",
+  "home-automation",
+  "iot",
+  "perfume-genie",
+  "rituals",
+  "smart-home",
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Framework :: AsyncIO",
+  "Intended Audience :: Developers",
+  "Natural Language :: English",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: 3",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = ['aiohttp (>=3.0.0)', 'awesomeversion (>=22.0.0)', 'mashumaro (>=3.13,<4.0.0)', 'orjson (>=3.9.8)', 'probatio (>=0.13.0)', 'yarl (>=1.6.0)']
+
+[project.optional-dependencies]
+cli = ["rich>=14.0.0", "typer>=0.15.1"]
+
+[project.scripts]
+ritualsgenie = "ritualsgenie._cli:main"
+
+[tool.poetry]
+requires-poetry = '>=2.0'
+packages = [{ include = "ritualsgenie", from = "src" }]
+
+[project.urls]
+homepage = "https://github.com/frenck/python-ritualsgenie"
+repository = "https://github.com/frenck/python-ritualsgenie"
+documentation = "https://github.com/frenck/python-ritualsgenie"
+"Bug Tracker" = "https://github.com/frenck/python-ritualsgenie/issues"
+Changelog = "https://github.com/frenck/python-ritualsgenie/releases"
+
+[tool.poetry.group.dev.dependencies]
+aioresponses = "0.7.9"
+codespell = "2.4.3"
+covdefaults = "2.3.0"
+coverage = { version = "7.15.4", extras = ["toml"] }
+ty = "0.0.75"
+pre-commit-hooks = "6.0.0"
+prek = "0.5.0"
+pylint = "4.0.7"
+pytest = "9.1.1"
+pytest-asyncio = "1.4.0"
+pytest-cov = "7.1.0"
+ruff = "0.16.4"
+safety = "3.8.1"
+syrupy = "6.0.0"
+typer = "0.25.0"
+yamllint = "1.38.0"
+zizmor = "1.29.0"
+
+[tool.coverage.run]
+plugins = ["covdefaults"]
+source = ["ritualsgenie"]
+
+[tool.coverage.report]
+show_missing = true
+fail_under = 90
+omit = [
+  "src/ritualsgenie/_cli.py",
+  "src/ritualsgenie/cli/async_typer.py",
+]
+
+[tool.ty.environment]
+python-version = "3.12"
+
+[tool.pylint.MASTER]
+ignore = ["tests"]
+
+[tool.pylint.BASIC]
+good-names = ["_", "ex", "fp", "i", "id", "j", "k", "on", "Run", "T"]
+
+[tool.pylint.DESIGN]
+max-attributes = 50
+max-locals = 30
+
+[tool.pylint."MESSAGES CONTROL"]
+disable = ["duplicate-code", "format", "unsubscriptable-object", "wrong-import-order"]
+
+[tool.pylint.SIMILARITIES]
+ignore-imports = true
+
+[tool.pylint.FORMAT]
+max-line-length = 88
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+  "ANN401",  # Opinionated warning on disallowing dynamically typed expressions
+  "CPY001",  # New in Ruff 0.16; this project doesn't maintain file headers
+  "TRY301",  # Abstract raise to inner function — not useful for this codebase
+  "D203",    # Conflicts with other rules
+  "D213",    # Conflicts with other rules
+  "D417",    # False positives in some occasions
+  "PLR2004", # Just annoying, not really useful
+
+  # Conflicts with the Ruff formatter
+  "COM812",
+  "ISC001",
+]
+
+[tool.ruff.lint.flake8-pytest-style]
+mark-parentheses = false
+fixture-parentheses = false
+
+[tool.ruff.lint.isort]
+known-first-party = ["ritualsgenie"]
+
+[tool.ruff.lint.mccabe]
+max-complexity = 25
+
+[build-system]
+requires = ["poetry-core>=2.0"]
+build-backend = "poetry.core.masonry.api"

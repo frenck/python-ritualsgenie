@@ -1,0 +1,5 @@
+{
+  "code": 400,
+  "status": "Bad Request",
+  "message": "Value 4 is not a valid option, valid values: 1|2|3"
+}

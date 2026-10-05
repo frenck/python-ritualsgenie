@@ -1,0 +1,34 @@
+---
+name: Issue
+description: Report an issue with the Rituals Perfume Genie Python client.
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A clear description of what the issue is.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: The version of the Rituals Perfume Genie Python client.
+      placeholder: e.g., 1.0.0
+    validations:
+      required: true
+  - type: input
+    id: diffuser-model
+    attributes:
+      label: Diffuser model
+      description: The Perfume Genie model you are using.
+      placeholder: e.g., Perfume Genie 2.0
+    validations:
+      required: false
+  - type: textarea
+    id: additional-information
+    attributes:
+      label: Additional information
+      description: Any logs, tracebacks, or other context.
+    validations:
+      required: false

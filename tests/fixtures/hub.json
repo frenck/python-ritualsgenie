@@ -1,0 +1,59 @@
+{
+  "hublot": "LOT000-00-00000-00001",
+  "hash": "1111111111111111111111111111111111111111111111111111111111111111",
+  "ota": 0,
+  "pin": null,
+  "status": 0,
+  "timezone": "Europe/Amsterdam",
+  "attributes": {
+    "roomc": true,
+    "speedc": true,
+    "fanc": true,
+    "roomnamec": true,
+    "fspacenamec": true,
+    "fspacetypec": true,
+    "ledc": true,
+    "squaremeterc": true
+  },
+  "attributeValues": {
+    "roomc": "4",
+    "speedc": "3",
+    "fanc": "0",
+    "roomnamec": "Woonkamer",
+    "resetc": "0",
+    "fspacenamec": "Living room",
+    "fspacetypec": "living",
+    "ledc": "0",
+    "squaremeterc": "20"
+  },
+  "firmwareId": 127,
+  "maxScheduleDays": 35,
+  "firmwareInfo": {
+    "currentFirmware": "5.4",
+    "currentFirmwareId": 127,
+    "newestFirmware": "5.4",
+    "newestFirmwareId": 127
+  },
+  "deviceFlowVersion": 2,
+  "extraFunctions": {
+    "hasWifiErrorStats": true,
+    "hasLedFunction": true,
+    "hasSmartSchedules": true,
+    "color": "gold"
+  },
+  "sensors": {
+    "wific": true,
+    "battc": false,
+    "fillc": true,
+    "rfidc": true,
+    "versionc": true,
+    "usedc": false
+  },
+  "hasSchedules": false,
+  "currentActivatedDays": 0,
+  "nextFanChange": {
+    "nextStateChangeValue": null,
+    "nextStateChangeTime": null,
+    "currentState": "off"
+  }
+}

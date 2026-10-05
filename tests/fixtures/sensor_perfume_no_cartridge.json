@@ -1,0 +1,9 @@
+{
+  "title": "Cartridge is not loaded",
+  "image": "background-splash.png",
+  "discover_url": null,
+  "icon": "icon-noscent.png",
+  "description": "There is no cartridge loaded, please insert a scent.",
+  "scentFound": false,
+  "raw": "0"
+}

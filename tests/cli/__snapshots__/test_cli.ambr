@@ -1,0 +1,50 @@
+# serializer version: 1
+# name: test_hubs
+  '''
+                                            Perfume Genie diffusers                                           
+  ┏━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━┓
+  ┃ Name             ┃ Hublot                ┃ Online ┃ On  ┃ Perfume amount ┃ Room size ┃ Firmware          ┃
+  ┡━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━┩
+  │ Woonkamer        │ LOT000-00-00000-00001 │ no     │ no  │ 3              │ 20 m²     │ 5.4               │
+  │ Slaapkamer Genie │ LOT000-00-00000-00002 │ yes    │ yes │ 2              │ 20 m²     │ 4.2 (update: 5.4) │
+  └──────────────────┴───────────────────────┴────────┴─────┴────────────────┴───────────┴───────────────────┘
+  
+  '''
+# ---
+# name: test_info
+  '''
+                  Woonkamer                 
+  ┌────────────────┬───────────────────────┐
+  │ Model          │ Genie 2.1             │
+  │ Generation     │ 2                     │
+  │ Color          │ gold                  │
+  │ Hublot         │ LOT000-00-00000-00001 │
+  │ Online         │ no                    │
+  │ On             │ no                    │
+  │ Perfume amount │ 3                     │
+  │ Room size      │ 20 m²                 │
+  │ Standby LED    │ yes                   │
+  │ Firmware       │ 5.4                   │
+  │ Schedules      │ no                    │
+  │ Timezone       │ Europe/Amsterdam      │
+  └────────────────┴───────────────────────┘
+  
+  '''
+# ---
+# name: test_sensors
+  '''
+                    Sensors of Woonkamer                   
+  ┏━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+  ┃ Sensor             ┃ Reading                          ┃
+  ┡━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+  │ Perfume            │ Private Collection Sweet Jasmine │
+  │ Cartridge inserted │ yes                              │
+  │ Fill level         │ 70-80% (about 70 %)              │
+  │ WiFi signal        │ Medium (-80 dBm)                 │
+  │ Battery            │ -                                │
+  │ Charging           │ yes                              │
+  │ Version            │ 5.4                              │
+  └────────────────────┴──────────────────────────────────┘
+  
+  '''
+# ---

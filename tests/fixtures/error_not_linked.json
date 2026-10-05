@@ -1,0 +1,5 @@
+{
+  "code": 401,
+  "status": "Unauthorized",
+  "message": "This hub is not linked to the user's account"
+}
