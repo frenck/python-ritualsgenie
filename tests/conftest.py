@@ -61,18 +61,18 @@ HUB_TWO = "2" * 64
 TOKEN = "a-token"
 
 
-def mock_login(responses: aioresponses, token: str = TOKEN) -> None:
+def mock_login(mocker: aioresponses, token: str = TOKEN) -> None:
     """Mock a successful login."""
-    responses.post(
+    mocker.post(
         LOGIN_URL,
         status=200,
         payload={"success": token},
     )
 
 
-def mock_hubs(responses: aioresponses, *, status: int = 200) -> None:
+def mock_hubs(mocker: aioresponses, *, status: int = 200) -> None:
     """Mock the account hubs endpoint."""
-    responses.get(
+    mocker.get(
         HUBS_URL,
         status=status,
         body=load_fixture("hubs.json"),
@@ -80,9 +80,9 @@ def mock_hubs(responses: aioresponses, *, status: int = 200) -> None:
     )
 
 
-def calls(responses: aioresponses, method: str, url: str) -> list:
+def calls(mocker: aioresponses, method: str, url: str) -> list:
     """Return the requests made to an URL."""
-    return responses.requests.get((method, URL(url)), [])
+    return mocker.requests.get((method, URL(url)), [])
 
 
 def load_fixture(name: str) -> str:

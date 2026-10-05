@@ -35,6 +35,7 @@ if TYPE_CHECKING:
     from yarl import URL
 
 
+# pylint: disable-next=too-few-public-methods
 class HeldLogin:
     """A login response the test releases by hand.
 
